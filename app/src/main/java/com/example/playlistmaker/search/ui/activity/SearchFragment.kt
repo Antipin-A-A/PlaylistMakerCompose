@@ -1,7 +1,6 @@
 package com.example.playlistmaker.search.ui.activity
 
 import android.content.Context
-import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import android.text.Editable
@@ -17,13 +16,13 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.playlistmakercompose.R
 import com.example.playlistmaker.app.ConnectBroadcastReceiver
-import com.example.playlistmakercompose.databinding.FragmentSearchBinding
 import com.example.playlistmaker.search.domain.api.OnItemClickListener
 import com.example.playlistmaker.search.domain.modeles.Track
 import com.example.playlistmaker.search.ui.state.TrackListState
 import com.example.playlistmaker.search.ui.viewmodel.SearchActivityViewModel
+import com.example.playlistmakercompose.R
+import com.example.playlistmakercompose.databinding.FragmentSearchBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
