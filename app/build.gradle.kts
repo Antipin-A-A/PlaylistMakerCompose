@@ -1,8 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
     id("com.google.devtools.ksp")
-
 }
 
 android {
@@ -41,6 +41,13 @@ android {
 }
 
 dependencies {
+    implementation(libs.coil.compose)
+    implementation(libs.androidx.material3)
+    implementation (libs.androidx.runtime.livedata)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.ui)
+    implementation(libs.androidx.material)
+    implementation(libs.koin.androidx.compose)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.legacy.support.v4)
     implementation(libs.androidx.lifecycle.livedata.ktx)

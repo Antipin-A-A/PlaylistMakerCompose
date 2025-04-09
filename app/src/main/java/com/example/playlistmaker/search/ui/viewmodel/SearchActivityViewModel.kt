@@ -1,8 +1,5 @@
 package com.example.playlistmaker.search.ui.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MediatorLiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.playlistmaker.base_room.domain.api.RoomInteract
@@ -12,6 +9,8 @@ import com.example.playlistmaker.search.domain.modeles.Track
 import com.example.playlistmaker.search.ui.state.TrackListState
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
@@ -20,8 +19,11 @@ class SearchActivityViewModel(
     private val roomInteract: RoomInteract
 ) : ViewModel() {
 
-    private val stateMutable = MutableLiveData<TrackListState>()
-    val state: LiveData<TrackListState> = stateMutable
+    private val stateMutable = MutableStateFlow<TrackListState>(TrackListState.Loading)
+    val state = stateMutable.asStateFlow()
+
+//    private val _observeMediaStateFlow = MutableStateFlow<TrackListState>(TrackListState.Loading)
+//    val observeMediaStateFlow: StateFlow<TrackListState> = _observeMediaStateFlow.asStateFlow()
 
     init {
         getHistoryTrackList()
@@ -57,19 +59,12 @@ class SearchActivityViewModel(
         trackIteractor.removeTrackList()
     }
 
-    private val mediatorStateLiveData = MediatorLiveData<TrackListState>().also { liveData ->
-        liveData.addSource(stateMutable) { trackState ->
-            liveData.value = when (trackState) {
-                is TrackListState.Loading -> trackState
-                is TrackListState.Content -> trackState
-                is TrackListState.Error -> trackState
-                is TrackListState.Empty -> trackState
-                is TrackListState.GetHistoryList -> trackState
-            }
-        }
-    }
 
-    fun observeMediaState(): LiveData<TrackListState> = mediatorStateLiveData
+/*    fun observeMediaState(): Flow<TrackListState> = flow {
+        observeMediaStateFlow.collect { value ->
+            emit(value)
+        }
+    }*/
 
     fun iTunesServiceSearch(searchText: String) {
         if (searchText.isNotEmpty()) {
@@ -111,7 +106,7 @@ class SearchActivityViewModel(
     }
 
     private fun renderState(state: TrackListState) {
-        stateMutable.postValue(state)
+        stateMutable.value = state
     }
 
     fun searchDebounce(changedText: String) {

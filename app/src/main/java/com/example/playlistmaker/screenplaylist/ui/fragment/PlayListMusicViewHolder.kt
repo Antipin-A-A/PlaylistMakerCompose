@@ -1,15 +1,15 @@
-package com.example.playlistmaker.search.ui.activity
+package com.example.playlistmaker.screenplaylist.ui.fragment
 
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.example.playlistmaker.search.domain.modeles.Track
 import com.example.playlistmakercompose.R
 import com.example.playlistmakercompose.databinding.ActivityMusicAdapterBinding
-import com.example.playlistmaker.search.domain.modeles.Track
 
-class MusicViewHolder(item: View) : RecyclerView.ViewHolder(item){
+class PlayListMusicViewHolder(item: View) : RecyclerView.ViewHolder(item){
 
     private val binding = ActivityMusicAdapterBinding.bind(item)
 
