@@ -1,26 +1,26 @@
-package com.example.playlistmaker.search.ui.activity
+package com.example.playlistmaker.screenplaylist.ui.fragment
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.playlistmakercompose.R
 import com.example.playlistmaker.search.domain.api.OnItemClickListener
 import com.example.playlistmaker.search.domain.modeles.Track
+import com.example.playlistmakercompose.R
 
-class MusicAdapter(private val onItemClickListener: OnItemClickListener<Track>) :
+class PlayListMusicAdapter(private val onItemClickListener: OnItemClickListener<Track>) :
 
-    RecyclerView.Adapter<MusicViewHolder>() {
+    RecyclerView.Adapter<PlayListMusicViewHolder>() {
 
     var tracks = mutableListOf<Track>()
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MusicViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlayListMusicViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.activity_music_adapter, parent, false)
-        return MusicViewHolder(view)
+        return PlayListMusicViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: MusicViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: PlayListMusicViewHolder, position: Int) {
         holder.bind(tracks[position])
         holder.itemView.setOnClickListener { onItemClickListener.onItemClick(tracks[position]) }
     }

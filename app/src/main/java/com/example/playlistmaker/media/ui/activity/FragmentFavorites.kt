@@ -13,9 +13,9 @@ import com.example.playlistmakercompose.R
 import com.example.playlistmakercompose.databinding.FragmentFavoritesBinding
 import com.example.playlistmaker.media.ui.viewmodel.FavoriteState
 import com.example.playlistmaker.media.ui.viewmodel.FavoritesViewModel
+import com.example.playlistmaker.screenplaylist.ui.fragment.PlayListMusicAdapter
 import com.example.playlistmaker.search.domain.api.OnItemClickListener
 import com.example.playlistmaker.search.domain.modeles.Track
-import com.example.playlistmaker.search.ui.activity.MusicAdapter
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.activityViewModel
@@ -27,7 +27,7 @@ class FragmentFavorites : Fragment() {
 
     private val viewModel by activityViewModel<FavoritesViewModel>()
 
-    private lateinit var adapter: MusicAdapter
+    private lateinit var adapter: PlayListMusicAdapter
 
     private var isClickAllowed = true
 
@@ -52,7 +52,7 @@ class FragmentFavorites : Fragment() {
             }
         }
 
-        adapter = MusicAdapter(onItemClickListener)
+        adapter = PlayListMusicAdapter(onItemClickListener)
         binding.trackList.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.trackList.adapter = adapter
