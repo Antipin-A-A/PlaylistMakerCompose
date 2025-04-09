@@ -20,8 +20,8 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.example.playlistmaker.R
-import com.example.playlistmaker.databinding.FragmentNewPlayListBinding
+import com.example.playlistmakercompose.R
+import com.example.playlistmakercompose.databinding.FragmentNewPlayListBinding
 import com.example.playlistmaker.playlist.ui.viewmodel.NewPlayListViewModel
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.koin.androidx.viewmodel.ext.android.activityViewModel

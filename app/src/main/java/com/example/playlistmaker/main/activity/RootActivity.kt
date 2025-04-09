@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import com.example.playlistmaker.R
-import com.example.playlistmaker.databinding.ActivityRootBinding
+import com.example.playlistmakercompose.R
+import com.example.playlistmakercompose.databinding.ActivityRootBinding
 
 class RootActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRootBinding

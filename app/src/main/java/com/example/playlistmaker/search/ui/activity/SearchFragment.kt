@@ -17,9 +17,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.playlistmaker.R
+import com.example.playlistmakercompose.R
 import com.example.playlistmaker.app.ConnectBroadcastReceiver
-import com.example.playlistmaker.databinding.FragmentSearchBinding
+import com.example.playlistmakercompose.databinding.FragmentSearchBinding
 import com.example.playlistmaker.search.domain.api.OnItemClickListener
 import com.example.playlistmaker.search.domain.modeles.Track
 import com.example.playlistmaker.search.ui.state.TrackListState

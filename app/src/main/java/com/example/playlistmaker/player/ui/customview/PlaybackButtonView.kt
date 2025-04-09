@@ -10,7 +10,7 @@ import android.view.View
 import androidx.annotation.AttrRes
 import androidx.annotation.StyleRes
 import androidx.core.graphics.drawable.toBitmap
-import com.example.playlistmaker.R
+import com.example.playlistmakercompose.R
 import kotlin.math.min
 
 class PlaybackButtonView @JvmOverloads constructor(

@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.playlistmaker.R
-import com.example.playlistmaker.databinding.FragmentPlaylistsBinding
+import com.example.playlistmakercompose.R
+import com.example.playlistmakercompose.databinding.FragmentPlaylistsBinding
 import com.example.playlistmaker.media.ui.viewmodel.PlaylistsViewModel
 import com.example.playlistmaker.playlist.domain.model.PlayList
 import com.example.playlistmaker.playlist.ui.viewmodel.PlayListState

@@ -13,8 +13,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
-import com.example.playlistmaker.R
-import com.example.playlistmaker.databinding.FragmentScreenPlaylistBinding
+import com.example.playlistmakercompose.R
+import com.example.playlistmakercompose.databinding.FragmentScreenPlaylistBinding
 import com.example.playlistmaker.playlist.domain.model.PlayList
 import com.example.playlistmaker.screenplaylist.ui.viewmodel.PlayListScreenState
 import com.example.playlistmaker.screenplaylist.ui.viewmodel.ScreenPlaylistViewModel

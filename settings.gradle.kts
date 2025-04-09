@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "PlaylistMaker"
+rootProject.name = "PlaylistMakerCompose"
 include(":app")
  

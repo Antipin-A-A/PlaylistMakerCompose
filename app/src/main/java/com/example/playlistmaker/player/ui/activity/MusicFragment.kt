@@ -23,9 +23,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.example.playlistmaker.R
+import com.example.playlistmakercompose.R
 import com.example.playlistmaker.app.ConnectBroadcastReceiver
-import com.example.playlistmaker.databinding.FragmentMusicBinding
+import com.example.playlistmakercompose.databinding.FragmentMusicBinding
 import com.example.playlistmaker.player.service.MusicService
 import com.example.playlistmaker.player.ui.viewmodel.MusicFragmentViewModel
 import com.example.playlistmaker.player.ui.viewmodel.PlayListStateForMusic

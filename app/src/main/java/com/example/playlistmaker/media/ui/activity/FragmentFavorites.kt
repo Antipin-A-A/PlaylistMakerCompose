@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.playlistmaker.R
-import com.example.playlistmaker.databinding.FragmentFavoritesBinding
+import com.example.playlistmakercompose.R
+import com.example.playlistmakercompose.databinding.FragmentFavoritesBinding
 import com.example.playlistmaker.media.ui.viewmodel.FavoriteState
 import com.example.playlistmaker.media.ui.viewmodel.FavoritesViewModel
 import com.example.playlistmaker.search.domain.api.OnItemClickListener

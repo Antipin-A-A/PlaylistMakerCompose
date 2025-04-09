@@ -13,7 +13,7 @@ import android.os.Build
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
 import androidx.core.app.ServiceCompat
-import com.example.playlistmaker.R
+import com.example.playlistmakercompose.R
 import com.example.playlistmaker.player.data.impl.MediaPlayerRepositoryImpl
 import com.example.playlistmaker.player.domain.api.interact.MediaPlayerInteract
 import com.example.playlistmaker.player.domain.imp.MediaPlayerInteractImpl

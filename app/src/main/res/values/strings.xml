@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PlaylistMaker</string>
+    <string name="app_name">PlaylistMakerCompose</string>
     <string name="playlist_market">Playlist market</string>
     <string name="search_text">Поиск</string>
     <string name="mediateka">Медиатека</string>
